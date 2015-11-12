@@ -33,12 +33,16 @@ function! audio_junkie#get_play_complete(ArgLead, CmdLine, CusorPos)
   let l:filter_cmd = printf('v:val =~ "^%s"', a:ArgLead)
 
   if l:len_cmd == 1
-    return filter(keys(g:audio_junkie#define), l:filter_cmd)
+    return filter(audio_junkie#get_service_list(), l:filter_cmd)
   elseif l:len_cmd == 2
     let l:service = l:cmd[1]
     return filter(audio_junkie#get_channel_list(l:service), l:filter_cmd)
   endif
   return []
+endfunction
+
+function! audio_junkie#get_service_list()
+  return keys(g:audio_junkie#define)
 endfunction
 
 function! audio_junkie#get_channel_list(service)
