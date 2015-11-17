@@ -8,6 +8,7 @@ set cpo&vim
 
 command! -nargs=+ -complete=customlist,audio_junkie#get_play_complete AudioJunkiePlay call audio_junkie#play(<f-args>)
 command! AudioJunkieStop call audio_junkie#stop()
+command! -nargs=1 AudioJunkieSetVolume call audio_junkie#set_volume(<f-args>)
 
 augroup AudioJunkie
   autocmd!
