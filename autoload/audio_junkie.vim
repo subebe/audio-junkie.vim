@@ -85,3 +85,7 @@ function! audio_junkie#stop()
   endif
 endfunction
 
+function! audio_junkie#set_volume(level)
+  call s:PM.writeln(g:audio_junkie#label, 'volume ' . a:level . ' 1')
+endfunction
+
