@@ -89,3 +89,11 @@ function! audio_junkie#set_volume(level)
   call s:PM.writeln(g:audio_junkie#label, 'volume ' . a:level . ' 1')
 endfunction
 
+function! audio_junkie#volume_up()
+  call s:PM.writeln(g:audio_junkie#label, 'volume +1')
+endfunction
+
+function! audio_junkie#volume_down()
+  call s:PM.writeln(g:audio_junkie#label, 'volume -1')
+endfunction
+
