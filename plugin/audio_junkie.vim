@@ -11,6 +11,7 @@ command! AudioJunkieStop call audio_junkie#stop()
 command! -nargs=1 AudioJunkieSetVolume call audio_junkie#set_volume(<f-args>)
 command! AudioJunkieVolumeUp call audio_junkie#volume_up()
 command! AudioJunkieVolumeDown call audio_junkie#volume_down()
+command! AudioJunkieNowTrack call audio_junkie#disp_now_track()
 
 augroup AudioJunkie
   autocmd!
